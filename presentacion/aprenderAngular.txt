@@ -1,0 +1,24 @@
+﻿Campos de la tabla de gastos:
+Fecha
+Importe
+De dónde salió el dinero: Bolsillo / Tarjeta (antes como conocido como “Forma de Pago”)
+Tipo de Gasto: Tira de una tabla ¿Json? En un recurso (fichero) estático. Si nos enseñaras a detectar que el fichero ha cambiado (versionado) y que por tanto hay volver a bajarlo genial.
+También me gustaría que este campo fuera multilabel (pa nota) 
+Descripción
+
+Hacer varias vistas de estos datos:
+
+Una rejilla al estilo tradicional, con filtros encolumnados.
+Un filtro al estilo google (que busque por todo)
+Una rejilla con cuadriculas, como si fuera una tienda. Con grupos basados en el Tipo de gasto.
+Ver que el filtro estilo google nos puede seguir valiendo.
+
+No se si a Jmiguel le dará tiempo a hacer un Api rest, pero si empezamos sabiendo como guardar los datos en local, genial. Y ha saber cuales están pendientes de mandar al servidor, genial++
+
+Igual. Si Jmiguel tuviera un Api rest que devolviera la tabla de tipos de gasto, genial el saber enganchar el combo (o el multietiqueta mejor) por ajax.
+
+Alguna que otra tontería para la edición:
+Que al saber la fecha ya te fuera diciendo: En el mes llevas gastado X, el mismo mes del año pasado gastaste Y
+Y por supuesto interactuar con el keypres del importe para que los importes fueran recalculandóse.
+¿mas? Que al detectar que el tipo de Gasto fuera “Regalo” te preguntara otro campo fuera “A quien” y que ese campo fuera una autoetiqueta que fuera aprendiendo.
+Bola extra: que junto al importe apareciera un chek para indicar que lo vas a meter en otra divisa: por lo que tiene que aparecer en combo de divisas: EUR, USA, LIB y que te haga una conversión a EUR al lado.
