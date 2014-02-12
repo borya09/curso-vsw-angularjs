@@ -1,5 +1,4 @@
-INSTALLATION
---------
+#### INSTALLATION
 Clone this repo and install the dependencies:
 
 If not installed:
@@ -17,27 +16,29 @@ Project dependencies:
 * Install project dependencies -- `bower install`
 
 
-REST SERVER
------------
+#### REST SERVER
+
 A full compatible example can be found on [https://github.com/borya09/curso-vsw-node-rest] (https://github.com/borya09/curso-vsw-node-rest)
 
 
-DEVELOPMENT
---------
+#### DEVELOPMENT
+
 'grunt server'
 
 Starts development environment:
-* Watch changes in sass, jade -> compile
+* Watch changes in sass, jade, js -> compile
 * live reload browser
 
-DEPLOYMENT
---------
+
+#### DEPLOYMENT
+
 'grunt build'
 
 Builds the project:
 * Unify/minify js & css
 
 
-SLIDES OF THE COURSE
---------
+
+#### SLIDES OF THE COURSE
+
 http://es.slideshare.net/borya09/presentacion-31114674
