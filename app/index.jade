@@ -11,22 +11,28 @@ html.no-js
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title= title
+    title Mis gastos
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width')
     // Place favicon.ico and apple-touch-icon.png in the root directory
     // build:css(.tmp) styles/main.css
+    link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='styles/main.css')
     // endbuild
     script(type='text/javascript').
         document.write('<base href="' + document.location + '" />');
-  body(ng-app='MyTutorialApp',ng-controller='MainController')
+  body(ng-app='MisGastosApp')
 
-    span {{understand}}
+    .container(ng-view)
 
     script(src='bower_components/jquery/jquery.js')
     script(src='bower_components/angular/angular.js')
+    script(src='bower_components/angular-route/angular-route.js')
     // build:js({.tmp,app}) scripts/scripts.js
-    script(src='scripts/app1.js')
-    script(src='scripts/app2.js')
+    script(src='scripts/mis-gastos-app.js')
+    script(src='scripts/mis-gastos-routes.js')
+    script(src='scripts/mis-gastos-service.js')
+    script(src='scripts/mis-gastos-lista-controller.js')
+    script(src='scripts/mis-gastos-detalle-controller.js')
+    script(src='scripts/mis-gastos-directives.js')
     // endbuild

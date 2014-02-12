@@ -1,0 +1,26 @@
+.mis-gastos-detalle
+    h1 '{{gasto.quien}}' pagó '{{gasto.que}}' con importe {{gasto.cuanto}} {{gasto.moneda}}
+    p.error.bg-danger(ng-show="error") {{error}}
+    form.css-form.form-horizontal(name="mis-gastos-detalle-form", novalidate)
+        .form-group
+            label.control-label.col-sm-2(for="quien") ¿Quién?
+            .col-sm-10
+                input#quien.form-control(type="text", ng-model="gasto.quien", required)
+
+        .form-group
+            label.control-label.col-sm-2(for="que") ¿Qué?
+            .col-sm-10
+                input#que.form-control(type="text", ng-model="gasto.que",required)
+
+        .form-group
+            label.control-label.col-sm-2(for="cuanto") ¿Cuanto?
+            .col-sm-4
+                input#cuanto.form-control(type="number", ng-model="gasto.cuanto", required)
+
+            label.control-label.col-sm-2(for="moneda") Moneda
+            .col-sm-4
+                select#moneda.form-control(ng-model="gasto.moneda", ng-options="c for c in monedas", required)
+
+        .form-group
+            .col-sm-offset-2.col-sm-10
+                button.btn.btn-default(ng-click="guardar()", ng-disabled="form.$invalid") Guardar

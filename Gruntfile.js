@@ -242,7 +242,7 @@ module.exports = function (grunt) {
 		},
 		concurrent: {
 			server: [
-				'jade:dev',
+				'jade',
 				'copy:styles',
 				'compass:dev'
 			],
@@ -296,25 +296,6 @@ module.exports = function (grunt) {
                     data: {
                         title: 'PROD!!',
                         env: 'prod'
-                    }
-
-                },
-				files: [
-					{
-						expand: true,
-						cwd: '<%= yeoman.app %>',
-						dest: '.tmp',
-						src: '{,*/}*.jade',
-						ext: '.html'
-					}
-				]
-			},
-            dev: {
-				options: {
-					pretty: true,
-                    data: {
-                        title: 'DEV!!',
-                        env: 'dev'
                     }
 
                 },

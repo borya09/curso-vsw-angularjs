@@ -1,42 +1,35 @@
-
-
-a
-  text-decoration: none
-  color: black
+h1
+  font-size: 16px
+  border: 1px solid rgba(255, 16, 50, 0.59)
+  +border-radius(4px)
   padding: 10px
+  margin-bottom: 30px
+
+
+.container
+  max-width: 700px
+  margin: 0 auto
+
+.error
+  padding: 10px
+  margin-bottom: 10px
+.nuevo-gasto
+  float: right
+
+.gastos
+  margin-top: 20px
+
+.gasto-eliminar span
+  cursor: pointer
   &:hover
-    background: black
-    color: white
+    color: red
 
+.gastos-label
+  text-align: center
 
+.gastos-filter
+  border: 1px solid rgb(77, 77, 77)
+  +border-radius(4px)
+  float: none
+  width: 100%
 
-section
-  margin: 10px
-  background: $section-back
-  +border-radius(5px)
-  border: $border-width solid darken($section-back, 20%)
-  @for $i from 1 through 10
-    &:nth-child(#{$i})
-      background: darken(red, 10% + ($i * 5))
-
-.success
-  +btn(#7d7d7d, white)
-
-.warning
-  +btn(#010101, red)
-
-.alert
-  +btn(#127d1d, white, 20%)
-
-
-
-.header-container
-  @extend %navbar
-  border-bottom: 4px solid
-  height: 100px
-  bottom: auto
-.footer-container
-  @extend %navbar
-  border-top: 4px solid
-  top: auto
-  height: 40px

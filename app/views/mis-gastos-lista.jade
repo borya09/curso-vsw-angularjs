@@ -1,0 +1,37 @@
+.mis-gastos-lista
+    h1 Listado de gastos
+    p.error.bg-danger(ng-show="error") {{error}}
+    .botonera.clearfix
+        a.btn.btn-primary.pull-right(href="#/gasto") Nuevo Gasto
+
+
+
+    .gastos.table-responsive
+        table.table.table-striped
+            thead
+                tr
+                    th
+                        .gastos-label.clearfix Quien
+                        input.gastos-filter.clearfix(type="text", ng-model="buscar.quien")
+                    th
+                        .gastos-label.clearfix Que
+                        input.gastos-filter.clearfix(type="text", ng-model="buscar.que")
+                    th
+                        .gastos-label.clearfix Cuando
+                        input.gastos-filter.clearfix(type="text", ng-model="buscar.cuanto")
+                    th
+                        .gastos-label.clearfix Moneda
+                        select.gastos-filter.clearfix(ng-model="buscar.moneda", ng-options="c for c in monedas", required)
+                            option(value="")
+                    th
+                    th
+            tbody
+                tr.gasto(ng-repeat="gasto in gastos | filter:buscar ")
+                    td.gasto-quien {{gasto.quien}}
+                    td.gasto-que {{gasto.que}}
+                    td.gasto-cuanto {{gasto.cuanto}}
+                    td.gasto-moneda {{gasto.moneda}}
+                    td.gasto-ver
+                        a.glyphicon.glyphicon-eye-open(ng-href="#/gasto/{{gasto._id}}")
+                    td.gasto-eliminar
+                        span.glyphicon.glyphicon-remove(ng-click="eliminar(gasto)")
